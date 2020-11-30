@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 205263799}
   - component: {fileID: 205263800}
   - component: {fileID: 205263801}
+  - component: {fileID: 205263802}
   m_Layer: 0
   m_Name: ScriptManager
   m_TagString: Untagged
@@ -185,6 +186,20 @@ MonoBehaviour:
   textInhalt: Neuer Text 123
   textSize: 25
   textLineSpacing: 1
+--- !u!114 &205263802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205263798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97be4aeb17e9a476f966cdfab0f38745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go: {fileID: 1904395961}
+  yPosition: 0
 --- !u!1 &384672486
 GameObject:
   m_ObjectHideFlags: 0
