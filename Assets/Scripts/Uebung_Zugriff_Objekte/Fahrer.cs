@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Fahrer : MonoBehaviour
 {
-    public string name;
+    public string nameVar;
 
     public Auto car;
 
     public void Update()
     {
         car.motor.isWorking = false;
-        car.links_hinten.name = "Honda";
+        car.links_hinten.marke = "Honda";
         car.links_hinten.isWorking = true;
-        car.rechts_vorne.name = "Toyota";
-        car.rechts_hinten.name = "Mitsubishi";
+        car.rechts_vorne.marke = "Toyota";
+        car.rechts_hinten.marke = "Mitsubishi";
         car.rechts_hinten.isWorking = true;
-        car.links_vorne.name = "Fiat";
+        car.links_vorne.marke = "Fiat";
     }
 }
