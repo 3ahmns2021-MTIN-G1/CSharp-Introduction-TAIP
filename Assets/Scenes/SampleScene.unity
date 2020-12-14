@@ -149,6 +149,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eba6c3c807e644d4a483fe042c77233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ganzeZahlVariable: 6
+  gleitKommaVariable: 4.2
+  textVariable: Hier kommt mein Text rein
+  boolVariable: 1
+  rigidBodyVariable: {fileID: 0}
+  boxColliderVariable: {fileID: 0}
+  transformVariable: {fileID: 0}
+  x: {fileID: 0}
+  ec: {fileID: 0}
+  btnVariable: {fileID: 0}
 --- !u!4 &1371136213
 Transform:
   m_ObjectHideFlags: 0
