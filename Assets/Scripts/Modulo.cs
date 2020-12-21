@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿//using System.Collections;
+//using System.Collections.Generic;
 using UnityEngine;
 
 public class Modulo : MonoBehaviour
@@ -12,7 +12,8 @@ public class Modulo : MonoBehaviour
     {
         int c = a / b;
         int d = c * b;
-        return a - d;
+        int e = a - d;
+        return e;
     }
 
     public void Update()

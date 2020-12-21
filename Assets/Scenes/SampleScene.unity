@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d07dcb5c9dc3491ba44e88d4583a154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wertEins: 20
-  wertZwei: 6
+  wertEins: 10
+  wertZwei: 3
   modulo: 0
 --- !u!4 &1371136213
 Transform:
