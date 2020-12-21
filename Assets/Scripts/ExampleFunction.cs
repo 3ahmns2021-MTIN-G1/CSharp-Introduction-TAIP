@@ -26,6 +26,12 @@ public class ExampleFunction : MonoBehaviour
         print(ergebnis);
     }
 
+    public void TextAusgabeFunktion(string a, string b)
+    {
+        string ausgabe = "Schönen Guten Tag " + a + ". " + b + ". " + "Bis Bald " + a + ".";
+        print(ausgabe);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +42,10 @@ public class ExampleFunction : MonoBehaviour
         RechenFunktion(2, 2, 8);
         RechenFunktion(4, 4, 342);
         RechenFunktion(100, 100, 1);
+
+        TextAusgabeFunktion("Herr Gruber","Text A");
+        TextAusgabeFunktion("Herr Maier","Text B");
+        TextAusgabeFunktion("Frau Forst","Text C");
     }
 
     // Update is called once per frame
