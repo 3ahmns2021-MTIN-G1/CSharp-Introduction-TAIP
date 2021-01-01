@@ -1,125 +1,85 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PrimzahlScript : MonoBehaviour
 {
-    //.......... Variablen ..........
+    //.......... Variablen Deklaration ..........
 
     private int eingabe;
-    private string ausgabe;
+    private int eingabeTemp;
 
-    private int eingabeNeu;
+    public int[] teilbarDurch;
 
-    public Text text;
-    public InputField inputField;
+    public InputField eingabeFeld;
+    public Text ausgabeFeld;
+    
 
     //.......... Funktionen Deklaration ..........
 
     public int ModuloFunktion(int a, int b)
     {
-        int c;
-        int d;
-        int e;
-
-        c = a / b;
-        d = c * b;
-        e = a - d;
-
-        return e;
-    }
-
-    public int PrimzahlRechner(int a)
-    {
-        if (a == 2)
+        if (a > b)
         {
-            return 1;
-        }
+            int c = a / b;
+            int d = c * b;
 
-        else if (a == 3)
-        {
-            return 1;
-        }
-
-        else if (a == 5)
-        {
-            return 1;
-        }
-
-        else if (a == 7)
-        {
-            return 1;
-        }
-
-        else if (ModuloFunktion(a,2) == 0)
-        {
-            return 0;
-        }
-
-        else if (ModuloFunktion(a,3) == 0)
-        {
-            return 0;
-        }
-
-        else if (ModuloFunktion(a,4) == 0)
-        {
-            return 0;
-        }
-
-        else if (ModuloFunktion(a,5) == 0)
-        {
-            return 0;
-        }
-
-        else if (ModuloFunktion(a,6) == 0)
-        {
-            return 0;
-        }
-
-        else if (ModuloFunktion(a,7) == 0)
-        {
-            return 0;
-        }
-
-        else if (ModuloFunktion(a,8) == 0)
-        {
-            return 0;
-        }
-
-        else if (ModuloFunktion(a,9) == 0)
-        {
-            return 0;
+            return a - d;
         }
 
         else
         {
-            return 1;
+            return 0;
         }
+    }
+
+    public bool IsPrimzahl(int a)
+    {
+        foreach (int i in teilbarDurch)
+        {
+           if (a == i)
+           {
+                return true;
+           }
+        }
+
+        for (int i = 2; i < 7; i++)
+        {
+           if (ModuloFunktion(a, i) == 0)
+           {
+                return false;
+           }
+        }
+
+        return true;
     }
 
     //.......... Funktionen Aufrufe ..........
 
     public void Update()
     {
-        eingabe = int.Parse(inputField.text);
-        eingabeNeu = eingabe;
-
-        if (PrimzahlRechner(eingabe) == 1)
+        if (eingabeFeld.text == "")
         {
-            ausgabe = eingabe.ToString() + " ist eine Primzahl";
-            text.text = ausgabe;
+            ausgabeFeld.text = "Bitte eine Zahl eingeben";
+            return;
+        }
+
+        eingabe = int.Parse(eingabeFeld.text);
+        eingabeTemp = eingabe;
+
+        if (IsPrimzahl(eingabe) == true)
+        {
+            ausgabeFeld.text = eingabe.ToString() + " ist eine Primzahl";
         }
 
         else
         {
-            while(PrimzahlRechner(eingabeNeu) == 0)
+            while (IsPrimzahl(eingabeTemp) == false)
             {
-                eingabeNeu++;
+                eingabeTemp++;
             }
 
-            ausgabe = eingabeNeu.ToString() + " ist die nächst höhere Primzahl";
-            text.text = ausgabe;
+            ausgabeFeld.text = eingabe.ToString() + " ist keine Primzahl" + Environment.NewLine + eingabeTemp.ToString() + " ist die nächst höhere Primzahl";
         }
     }
 }
