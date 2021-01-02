@@ -678,6 +678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371136213}
   - component: {fileID: 1371136212}
+  - component: {fileID: 1371136214}
   m_Layer: 0
   m_Name: ScriptManager
   m_TagString: Untagged
@@ -697,9 +698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc041146e068746d18f8a751755ac7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teilbarDurch: 02000000030000000500000007000000
   eingabeFeld: {fileID: 1006653554}
   ausgabeFeld: {fileID: 1497477337}
+  operationen: {fileID: 1371136214}
 --- !u!4 &1371136213
 Transform:
   m_ObjectHideFlags: 0
@@ -714,6 +715,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1371136214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371136211}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e11af202ca94c6c8d286ae271e5063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1482524978
 GameObject:
   m_ObjectHideFlags: 0
